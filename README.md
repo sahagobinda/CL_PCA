@@ -5,6 +5,7 @@ This repository contains code to accompany arXiv submission on Structured Compre
 The experiments with CIFAR-10 dataset in the paper can be reproduced by running the following scripts:
 
 Chage directory: 
+
 $cd PCA_CL_github
 
 $source run_cifar10.sh 
