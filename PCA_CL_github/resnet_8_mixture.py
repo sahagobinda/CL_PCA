@@ -316,7 +316,7 @@ def main():
                     if len(param.size())==4:
 
                         if task_id ==0:
-                            conv_filters[i] = run_pca (act_list[i], args.var_kept[i])
+                            conv_filters[i] = network_compression_PCA (act_list[i], args.var_kept[i])
                         else:
                             conv_filters[i] = projection_subtraction_pca (act_list[i], original_filter_list,\
                                                 conv_filter_list[task_id-1], i, args.var_kept[i])
