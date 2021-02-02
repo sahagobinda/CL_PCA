@@ -60,8 +60,9 @@ def act_collect_resnet (net, device, x, y): # x is from xtrain @check
     return act_list_final 
 ###----------------------------PCA functions -------------------------------------------###########
 def network_compression_PCA (activations, threshold=0.99):
-    """ - Used to compress the space after training 1st task 
-    - returns the optimum number of filters needed in each layer deciced by given threshold """
+    """ - PCA step adated from: sklearn.decomposition.PCA
+	   - Used to compress the space after training 1st task 
+         - returns the optimum number of filters needed in each layer deciced by given threshold """
     a=activations.detach().cpu().numpy().swapaxes(1,2).swapaxes(2,3)
     a_shape=a.shape
     a_reshaped = a.reshape(a_shape[0]*a_shape[1]*a_shape[2],a_shape[3])
@@ -83,6 +84,7 @@ def network_compression_PCA (activations, threshold=0.99):
 
 def projection_subtraction_pca(activations, original_filter, num_filterA, layer, threshold=0.99):
     '''projection_subtraction_PCA algorithm 
+     - PCA step adated from: sklearn.decomposition.PCA
        Inputs -
      - layer : layer index 
      - num_filterA : list contatining number of core filters in each layer 
