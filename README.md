@@ -1,6 +1,6 @@
 # SPACE: Structured Compression and Sharing of Representational Space for Continual Learning
 
-This repository contains code to accompany IEEE Access paper on SPACE: Structured Compression and Sharing of Representational Space for Continual Learning. https://ieeexplore.ieee.org/document/9605653
+This repository contains code to accompany our IEEE Access paper on SPACE: Structured Compression and Sharing of Representational Space for Continual Learning. https://ieeexplore.ieee.org/document/9605653
 
 The experiments with CIFAR-10/100 and 8-datasets in the paper can be reproduced by going to PCA_CL_github directory. The run.sh file contains the run parameters and finalized hyperparameters. They can be changed by editing the file and source the file to run the experiment using the following command : 
 
